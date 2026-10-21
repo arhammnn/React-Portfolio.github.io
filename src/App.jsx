@@ -1,5 +1,5 @@
 import DataImage from "./data";
-import { listTools, listProyek } from "./data"; 
+import { listTools, listProyek, listSertifikat } from "./data";
 
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
           <p>Lebih baik mencoba dari pada tidak sama sekali.🫡</p>
         </div> */}
         <h2 className="text-5xl/tight font-bold mb-6">Hi, Saya arham</h2>
-        <p className="text-base/loose mb-6 opacity-50">Dari ketertarikan awal pada dunia pemrograman hingga mendalami bidang teknologi informasi di jenjang magister, saya terus mengembangkan keterampilan teknis sekaligus memperluas wawasan. Bagi saya, setiap proyek adalah kesempatan untuk tumbuh dan memberi dampak.</p>
+        <p className="text-base/loose mb-6 opacity-50">Setiap proyek bagi saya adalah kesempatan untuk meningkatkan kemampuan teknis sekaligus memberikan kontribusi nyata di bidang teknologi.</p>
         <div className="flex items-center sm:gap-4 gap-2">
-        <a href="#" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600">Download CV <i class="ri-download-line ri-lg"></i></a>
+        <a href="/assets/cv.pdf" download="CV ARHAM.pdf"className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 md:z-100"> Download CV <i className="ri-download-line ri-lg"></i></a>
         <a href="#project" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600">Lihat Project <i className="ri-arrow-down-line ri-lg"></i></a>
       </div>
       </div>
@@ -26,7 +26,7 @@ function App() {
     <div className="about mt-25 py-10" id="about">
       <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy"/> 
-        <p className="text-base/loose mb-10">Perkenalkan, saya Arham, lulusan Universitas Muslim Indonesia, Jurusan Teknik Informatika. Setelah menyelesaikan studi sarjana, saya mengembangkan kemampuan di bidang web programming dan terus mengasah keterampilan tersebut. Saat ini, saya sedang menempuh pendidikan Magister (S2) di Universitas Hasanuddin, Jurusan Teknik Informatika, dengan tujuan berdedikasi pada dunia pendidikan, khususnya di bidang teknologi, serta meningkatkan kompetensi pada bidang teknologi informasi.</p>
+        <p className="text-base/loose mb-10">Perkenalkan, saya Arham, lulusan Teknik Informatika Universitas Muslim Indonesia. Saat ini, saya menempuh S2 di Universitas Hasanuddin dan fokus mengembangkan kemampuan di bidang Web Programming dan Cyber Security serta ingin berkontribusi di dunia pendidikan khususnya di bidang teknologi.</p>
           <div className="flex items-center justify-between">
             <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy"/> 
           <div className="flex items-center gap-6">
@@ -48,7 +48,7 @@ function App() {
 
       <div className="tools mt-25">
         <h1 className="text-4xl/snug font-bold mb-4 text-center" data-aos="fade-up" data-aos-once="true">Tools</h1>
-        <p className="xl:w-2/5 lg:2/4 md:2/3 sm:3/4 w-full text-base/loose opacity-50 text-center mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut beberapa tools yang biasa saya gunakan untuk pembuatan website ataupun Design</p>
+        <p className="xl:w-2/5 lg:2/4 md:2/3 sm:3/4 w-full text-base/loose opacity-50 text-center mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut beberapa tools yang biasa saya gunakan.</p>
         <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
 
           {listTools.map(tool => (
@@ -65,6 +65,60 @@ function App() {
       </div>
     </div>
     {/* End About */}
+
+{/* Start Certificate */}
+
+    <div className="certificate mt-25 pb-8 flex flex-col items-center" id="certificate">
+      <h1 
+        className="text-center text-4xl font-bold mb-2"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        Certified
+      </h1>
+
+      <p 
+        className="text-base/loose text-center opacity-50"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="300"
+        data-aos-once="true"
+      >
+        Berikut beberapa sertifikat yang telah saya peroleh
+      </p>
+
+      {/* UBAH BAGIAN INI: Tambahkan md:grid-cols-2 agar berjejer 2 ke samping di desktop */}
+      {/* 1. Tambahkan 'items-start' pada pembungkus grid utama ini */}
+    <div className="certificate-box mt-14 grid grid-cols-1 md:grid-cols-2 gap-10 w-full justify-items-center max-w-6xl items-start">
+
+    {listSertifikat.map((sertifikat) => (
+    <div 
+      key={sertifikat.id}
+      /* 2. Gunakan class ini sahaja. Buang 'h-full', 'flex-col', atau 'flex-1' yang ditambah sebelum ini */
+      className="p-2 bg-zinc-800 rounded-md w-full"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay={sertifikat.dad}
+      data-aos-once="true"
+    >
+      <img 
+        src={sertifikat.gambar}
+        alt="Certificate Image"
+        className="rounded-md w-full"
+        loading="lazy"
+      />
+      
+      <div className="mt-4">
+        <h2 className="text-md mb-2 text-center">{sertifikat.nama}</h2>
+      </div>
+    </div>
+  ))}
+
+</div>
+    </div>
+
+{/* End Certificate */}
 
     {/* Start Project */}
     <div className="project mt-25 pb-8" id="project">
@@ -84,7 +138,7 @@ function App() {
                   ))}
                 </div>
                 <div className="mt-8 text-center">
-                  <a href="#project" className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600">Lihat Website</a>
+                  <a href={proyek.link} className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600" target="_blank"rel="noreferrer">Lihat Website</a>
                 </div>
               </div>
             </div>

@@ -1,5 +1,7 @@
 
 import { useState, useEffect } from "react";
+import { FaArrowUp } from "react-icons/fa";
+// import { IoArrowUp } from "react-icons/io5";
 
 
 const Navbar = () => {
@@ -23,17 +25,28 @@ const Navbar = () => {
 
   return (
     <div className="navbar py-7 flex items-center justify-between">
+  
         <div className="logo">
-            <h1 className="text-3xl font-bold">Portfolio</h1>
+          <h1 className="text-3xl font-bold">Portfolio</h1>
         </div>
-        <ul className= {`menu flex items-center sm:gap-10 gap-5 md:static fixed left-1/2 -translate-x-1/2 md:translate-x-0 md:opacity-100 bg-white/30 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none
-          ${active ? "top-0 opacity-100" : "-top-10 opacity-0"}`}>
-            <li><a href="#home" className="sm:text-lg text-base text-lg font-medium">Home</a></li>
-            <li><a href="#about" className="sm:text-lg text-base text-lg text-lg font-medium">About</a></li>
-            <li><a href="#project" className="sm:text-lg text-base text-lg text-lg font-medium">Project</a></li>
-            <li><a href="#contact" className="sm:text-lg text-base text-lg text-lg font-medium">Contact</a></li>
+
+        {/* Menu Desktop */}
+        <ul className="menu md:flex hidden items-center gap-10">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#certificate">Certified</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
+
+        {/* Tombol Scroll Up Mobile */}
+<a 
+  href="#home"
+  className=" fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-violet-600 text-white rounded-full shadow-lg hover:bg-violet-500 hover:scale-110 transition"
+>
+  <FaArrowUp size={20} />
+</a>
+</div>
   )
 }
 
