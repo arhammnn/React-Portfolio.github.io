@@ -13,10 +13,10 @@ function App() {
           <p>Lebih baik mencoba dari pada tidak sama sekali.🫡</p>
         </div> */}
         <h2 className="text-5xl/tight font-bold mb-6">Hi, Saya arham</h2>
-        <p className="text-base/loose mb-6 opacity-50">Setiap proyek bagi saya adalah kesempatan untuk meningkatkan kemampuan teknis sekaligus memberikan kontribusi nyata di bidang teknologi.</p>
+        <p className="text-base/loose mb-6 opacity-50">Saya tertarik untuk terus belajar dan mengembangkan kemampuan di bidang pemrograman, analisis data, dan keamanan siber.</p>
         <div className="flex items-center sm:gap-4 gap-2">
-        <a href="/assets/cv.pdf" download="CV ARHAM.pdf"className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 md:z-100"> Download CV <i className="ri-download-line ri-lg"></i></a>
-        <a href="#project" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600">Lihat Project <i className="ri-arrow-down-line ri-lg"></i></a>
+        <a href="/assets/CV.pdf" download="CV ARHAM.pdf" className="text-sm md:text-base bg-violet-700 p-4 rounded-2xl hover:bg-violet-600 md:z-100">Download CV <i className="ri-download-line ri-lg"></i></a>
+        <a href="#project" className="text-sm md:text-base bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600">Lihat Project <i className="ri-arrow-down-line ri-lg"></i></a>
       </div>
       </div>
       <img src={DataImage.HeroImage} alt="Hero Image" className="w-full md:w-[500px] mx-0 md:ml-auto animate__animated animate__fadeInUp animate__delay-3s rounded-3xl" loading="lazy"/>
@@ -26,7 +26,7 @@ function App() {
     <div className="about mt-25 py-10" id="about">
       <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy"/> 
-        <p className="text-base/loose mb-10">Perkenalkan, saya Arham, lulusan Teknik Informatika Universitas Muslim Indonesia. Saat ini, saya menempuh S2 di Universitas Hasanuddin dan fokus mengembangkan kemampuan di bidang Web Programming dan Cyber Security serta ingin berkontribusi di dunia pendidikan khususnya di bidang teknologi.</p>
+        <p className="text-base/loose mb-10">Perkenalkan saya Arham, Saat ini saya sedang menempuh pendidikan Magister saya di Universitas Hasanuddin dan sekarang saya berfokus mengembangkan kemampuan di bidang Web Programming dan Cyber Security, serta memiliki ketertarikan untuk berkontribusi dalam dunia pendidikan, khususnya dalam riset dan pengembangan teknologi.</p>
           <div className="flex items-center justify-between">
             <img src={DataImage.HeroImage} alt="Image" className="w-12 rounded-md sm:block hidden" loading="lazy"/> 
           <div className="flex items-center gap-6">

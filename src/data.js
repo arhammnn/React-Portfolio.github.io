@@ -107,7 +107,7 @@ export const listSertifikat = [
   {
     id: 1,
     gambar: Sertifikat1,
-    nama: "Bug Hunting",
+    nama: "Web Security",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     dad: "200",
   },
